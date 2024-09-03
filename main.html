@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Scheduling and Route Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="WhatsApp_Image_2024-08-30_at_22.27.14_a2277f75-removebg-preview.png" alt="Logo">
+
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="#" id="login-link">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Automated Bus Scheduling and Route Management System</h1>
+                <p>Efficient, data-driven, and optimized for better service coverage.</p>
+                <a href="#features" class="cta-button">Explore Features</a>
+            </div>
+            <div class="header-animation">
+                <!-- Replace with an animated bus video or GIF -->
+                <video autoplay loop muted class="background clip">
+                    <source src="bus_v.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </header>
+ <!-- About Us Section -->
+<section id="about-us">
+    <h2>About Us</h2>
+    <p class="about-description">Our team is dedicated to revolutionizing public transportation through data analytics and GIS technologies. Our Automated Bus Scheduling and Route Management System is designed to streamline operations, enhance service coverage, and improve the overall efficiency of bus networks.</p>
+    <div class="team-container">
+        <!-- Upper Row of Team Members -->
+        <div class="team-row">
+            <div class="team-member">
+                <img src="pexels-olly-712513.jpg" alt="Sneha">
+                <h3>Sneha</h3>
+                <p>Head/ Frontend dev</p>
+            </div>
+            <div class="team-member">
+                <img src="pexels-elletakesphotos-1680172.jpg" alt="Aman yadav">
+                <h3>Aman Yadav</h3>
+                <p>Project Handler / Researcher</p>
+            </div>
+            <div class="team-member">
+                <img src="pexels-elletakesphotos-1680172.jpg" alt="Prithavi">
+                <h3>Prithavi</h3>
+                <p>Back-end Dev</p>
+            </div>
+        </div>
+        <!-- Lower Row of Team Members -->
+        <div class="team-row">
+            <div class="team-member">
+                <img src="pexels-elletakesphotos-1680172.jpg" alt="Kunal">
+                <h3>Kunal</h3>
+                <p>Researcher</p>
+            </div>
+            <div class="team-member">
+                <img src="pexels-elletakesphotos-1680172.jpg" alt="Yashawant">
+                <h3>Yashawant</h3>
+                <p>UI/Ux DEsigner/ Front-end dev</p>
+            </div>
+            <div class="team-member">
+                <img src="pexels-elletakesphotos-1680172.jpg" alt="Akshay">
+                <h3>Akshay</h3>
+                <p>Back-end dev</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>Linked Duty Scheduling</h3>
+            <p>Assign crews to specific buses throughout their shifts for improved accountability.</p>
+        </div>
+        <div class="feature">
+            <h3>Unlinked Duty Scheduling</h3>
+            <p>Manage crew handovers and rest periods efficiently.</p>
+        </div>
+        <div class="feature">
+            <h3>Route Management</h3>
+            <p>Map existing routes, draw new ones, and optimize route planning.</p>
+        </div>
+    </section>
+
+    <!-- LOG IN-->
+    <div id="main-content">
+        <!-- Initial Login Selection -->
+        <div id="login-selection" class="modal hidden">
+            <div class="login-container">
+                <h2>Select Your Login Level</h2>
+                <button class="login-button" onclick="selectLevel('driver')">Driver</button>
+                <button class="login-button" onclick="selectLevel('authority')">Authority</button>
+                <button class="close-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    
+        <!-- Driver Login Form -->
+        <div id="driver-login" class="modal hidden">
+            <div class="login-container">
+                <h2>Driver Login</h2>
+                <form id="driver-login-form">
+                    <label for="driver-username">Username:</label>
+                    <input type="text" id="driver-username" name="driver-username">
+                    <label for="driver-password">Password:</label>
+                    <input type="password" id="driver-password" name="driver-password">
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <button class="close-button" onclick="closeModal()">Close</button>
+                <div class="signup-prompt">
+                    <p>Don't have an account? <a href="#signup" onclick="openSignUp()">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Authority Login Form -->
+        <div id="authority-login" class="modal hidden">
+            <div class="login-container">
+                <h2>Authority Login</h2>
+                <form id="authority-login-form">
+                    <label for="authority-username">Username:</label>
+                    <input type="text" id="authority-username" name="authority-username">
+                    <label for="authority-password">Password:</label>
+                    <input type="password" id="authority-password" name="authority-password">
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <button class="close-button" onclick="closeModal()">Close</button>
+                <div class="signup-prompt">
+                    <p>Don't have an account? <a href="#signup" onclick="openSignUp()">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sign-Up Form -->
+        <div id="signup" class="modal hidden">
+            <div class="login-container">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <label for="signup-username">Username:</label>
+                    <input type="text" id="signup-username" name="signup-username">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="signup-email">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="signup-password">
+                    <button type="submit" class="login-button">Sign Up</button>
+                </form>
+                <button class="close-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h2>Contact Us</h2>
+            <p>Feel free to get in touch with us via phone or send us a message using the form below.</p>
+            
+            <div class="contact-details">
+                <p><i class="contact"></i> 91- 9761257286</p>
+                <p><i class="email"></i> <a href="mailto:support@example.com">support@example.com</a></p>
+                <p><i class="address"></i> 1234 Street Name, City, State, 12345</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Automated Bus Scheduling and Route Management System</p>
+    </footer>
+</body>
+</html>
