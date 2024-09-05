@@ -36,15 +36,11 @@ function openSignUp() {
 function handleFormSubmission(formId) {
     const form = document.getElementById(formId);
     form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        form.reset(); // Clear the form
-        alert('Successfully logged in / signed up!'); // Display a success message
-
-        // Optionally redirect to the home page
-        window.location.href = 'index.html';
+        event.preventDefault();  // Prevent default form submission
+        form.reset();  // Reset the form fields
+        window.location.href = 'driver.html';  // Redirect to driver.html
     });
 }
-
 // Attach form submission handlers
 document.addEventListener('DOMContentLoaded', () => {
     handleFormSubmission('driver-login-form');
